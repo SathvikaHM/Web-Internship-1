@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header, footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        nav ul li a:hover, nav ul li a:focus {
+            background-color: #555;
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            gap: 30px;
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .product-image img {
+            width: 320px;
+            transition: transform 0.3s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .product-image img:hover {
+            transform: scale(1.1) rotate(2deg);
+        }
+        .add-to-cart {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+        .reviews, .related-products {
+            text-align: center;
+            padding: 25px;
+            background-color: white;
+            border-radius: 10px;
+            margin: 30px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .related-product {
+            text-align: center;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+        }
+        .related-product:hover {
+            transform: scale(1.08);
+        }
+        .newsletter {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin: 30px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .newsletter input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .newsletter button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+        .newsletter button:hover {
+            background-color: #218838;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="product">
+            <div class="product-image">
+                <img src="product.jpeg" alt="Product Image">
+            </div>
+            <div class="product-details">
+                <h1>Product Name</h1>
+                <p class="description">This is a short description of the product highlighting its features and benefits.</p>
+                <p class="price">$99.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+        
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <p>★★★★☆</p>
+            <p>"Great product, highly recommend!"</p>
+        </section>
+        
+        <section class="related-products">
+            <h2>Related Products</h2>
+            <div class="product-grid">
+                <div class="related-product">
+                    <img src="related1.jpeg" alt="Related Product 1">
+                    <p>Related Product 1</p>
+                    <p>$89.99</p>
+                </div>
+                <div class="related-product">
+                    <img src="related2.jpeg" alt="Related Product 2">
+                    <p>Related Product 2</p>
+                    <p>$79.99</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Get the latest updates and offers.</p>
+            <input type="email" placeholder="Enter your email">
+            <button>Subscribe</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Your E-commerce Store</p>
+    </footer>
+</body>
+</html>
